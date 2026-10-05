@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f6fb">
+  <title>Lợi ích của công nghệ số trong học tập | Ngô Ngọc Hân</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18334d;
+      --muted: #587086;
+      --paper: #f1f6fb;
+      --surface: #ffffff;
+      --line: #d7e3ee;
+      --blue: #1769aa;
+      --blue-dark: #104a79;
+      --blue-soft: #e3f0fa;
+      --aqua: #36a6ad;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 92% 2%, rgba(207, 229, 247, 0.85), transparent 34rem),
+        var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      width: min(960px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .masthead {
+      padding: 52px 0 38px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      color: var(--blue-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.25rem, 6vw, 3.6rem);
+      font-weight: 600;
+      line-height: 1.12;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    main {
+      padding: 36px 0 48px;
+    }
+
+    .content-section + .content-section {
+      margin-top: 40px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-number {
+      color: var(--aqua);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--blue-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .profile-card,
+    .product-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 12px 32px rgba(24, 51, 77, 0.07);
+    }
+
+    .profile-card {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+    }
+
+    .profile-bio {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100%;
+      margin: 0;
+      padding: 28px;
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+      font-size: 1.02rem;
+    }
+
+    .profile-details {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 24px;
+      margin: 0;
+      padding: 28px;
+    }
+
+    .profile-details div {
+      min-width: 0;
+    }
+
+    .profile-details dt {
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .profile-details dd {
+      margin: 3px 0 0;
+      color: var(--ink);
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    .product-card {
+      padding: 24px;
+    }
+
+    .product-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .product-card p + p {
+      margin-top: 8px;
+    }
+
+    .file-name {
+      color: var(--ink) !important;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      margin-top: 18px;
+      padding: 9px 16px;
+      border-radius: 6px;
+      background: var(--blue);
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 160ms ease, transform 160ms ease;
+    }
+
+    .action-link:hover {
+      transform: translateY(-1px);
+      background: var(--blue-dark);
+    }
+
+    .action-link:focus-visible {
+      outline: 3px solid var(--aqua);
+      outline-offset: 3px;
+    }
+
+    .infographic-frame {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .infographic {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: 75vh;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .video-frame {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #102b43;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer {
+      padding: 20px 0 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 28px, 960px);
+      }
+
+      .masthead {
+        padding-top: 36px;
+      }
+
+      main {
+        padding-top: 28px;
+      }
+
+      .content-section + .content-section {
+        margin-top: 32px;
+      }
+
+      .profile-card {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-bio,
+      .profile-details {
+        padding: 22px;
+      }
+
+      .profile-details {
+        gap: 16px;
+      }
+
+      .product-card {
+        padding: 18px;
+      }
+
+      .infographic-frame {
+        padding: 12px;
+      }
+
+      h2 {
+        font-size: 1.55rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .profile-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <p class="eyebrow">Báo cáo học tập · Truyền thông đa phương tiện</p>
+      <h1>Lợi ích của công nghệ số trong học tập</h1>
+      <p class="intro">
+        Công nghệ số mở rộng cách chúng ta tiếp cận tri thức, kết nối với người học
+        khác và chủ động xây dựng lộ trình học tập. Khi được sử dụng phù hợp, các
+        công cụ số giúp việc học linh hoạt, trực quan và hiệu quả hơn.
+      </p>
+    </header>
+
+    <main>
+      <section class="content-section" aria-labelledby="profile-title">
+        <div class="section-heading">
+          <span class="section-number" aria-hidden="true">01</span>
+          <h2 id="profile-title">Giới thiệu bản thân</h2>
+        </div>
+        <div class="profile-card">
+          <p class="profile-bio">
+            Tôi là sinh viên ngành Truyền thông đa phương tiện tại Đại học Cần Thơ.
+            Tôi thực hiện các sản phẩm này để vận dụng kiến thức đã học, rèn luyện
+            kỹ năng sáng tạo nội dung và chia sẻ lợi ích của công nghệ số trong học tập.
+          </p>
+          <dl class="profile-details">
+            <div>
+              <dt>Họ và tên</dt>
+              <dd>NGÔ NGỌC HÂN</dd>
+            </div>
+            <div>
+              <dt>MSSV</dt>
+              <dd>B2605339</dd>
+            </div>
+            <div>
+              <dt>Lớp</dt>
+              <dd>DI26D1A2</dd>
+            </div>
+            <div>
+              <dt>Ngành</dt>
+              <dd>TRUYỀN THÔNG ĐA PHƯƠNG TIỆN</dd>
+            </div>
+            <div>
+              <dt>Trường</dt>
+              <dd>ĐẠI HỌC CẦN THƠ</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="pdf-title">
+        <div class="section-heading">
+          <span class="section-number" aria-hidden="true">02</span>
+          <h2 id="pdf-title">Sản phẩm 1 – File PDF</h2>
+        </div>
+        <div class="product-card">
+          <p class="file-name">MauBaoCao_Labs (1.2).docxhanB2605339 (2)(1).pdf</p>
+          <p>Tài liệu báo cáo của nhiệm vụ 1.2.</p>
+          <a
+            class="action-link"
+            href="c:\Users\Lenovo\OneDrive\Desktop\CT005_Lab05\Lab05_Ex1.1.pdf"
+            target="_blank"
+            rel="noopener"
+          >Mở file PDF</a>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="infographic-title">
+        <div class="section-heading">
+          <span class="section-number" aria-hidden="true">03</span>
+          <h2 id="infographic-title">Sản phẩm 2 – Infographic</h2>
+        </div>
+        <div class="product-card">
+          <p>Infographic tóm tắt những lợi ích nổi bật của công nghệ số trong học tập.</p>
+          <div class="media-frame infographic-frame">
+            <img
+              class="infographic"
+              src="Lab05_Ex2.1.png"
+              alt="Infographic về lợi ích của công nghệ số trong học tập"
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="video-title">
+        <div class="section-heading">
+          <span class="section-number" aria-hidden="true">04</span>
+          <h2 id="video-title">Sản phẩm 3 – Video</h2>
+        </div>
+        <div class="media-frame video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/sHzwum1gvME?si=eIQBJ-NH28XI1tkX"
+            title="Video về lợi ích của công nghệ số trong học tập"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Nội dung văn bản tham khảo từ Google Gemini, hình ảnh từ Unsplash (Unsplash license). Video tạo bởi CapCut, tài liệu từ Pexels/FreeSound (CC0).</p>
+    </footer>
+  </div>
+</body>
+</html>
